@@ -3,6 +3,8 @@ import M from "materialize-css";
 import Slider from './components/Slider';
 import 'materialize-css/dist/css/materialize.min.css';
 import Navbar from './components/Navbar';
+import { BrowserRouter,Route } from 'react-router-dom';
+import Reg from './components/Reg';
 
 
 
@@ -11,6 +13,7 @@ import Navbar from './components/Navbar';
 const App =()=>{
 
 return(
+  <BrowserRouter>
   <div className="container">
     <Navbar />
 
@@ -65,6 +68,12 @@ return(
 
 
   </div>
+
+
+  <Route   path="/reg"  render={()=><Reg />}/>
+
+
+  </BrowserRouter>
 )
 
 }
